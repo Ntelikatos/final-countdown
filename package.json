@@ -14,7 +14,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "serve": "serve -s build -l 4000",
     "start": "react-scripts start",
     "build": "react-scripts build",
