@@ -29,13 +29,12 @@ body {
     span {
       font-size: 32px;
       text-align: center;
-      // font-weight: 800;
-      line-height: 1.2;
+      // line-height: 1.5;
       letter-spacing: 1px;
       background-color: $timer-bg-color;
       color: white;
-      padding: 5px 15px;
       width: 100%;
+      padding: 8px 0px;
     }
 
     h1 {
@@ -74,9 +73,9 @@ body {
       span {
         font-size: 25px;
         font-weight: 500;
-        line-height: 1;
+        // line-height: 1.3;
         letter-spacing: 0.8px;
-        padding: 5px 10px;
+        padding: 5px 0px;
       }
 
       h1 {
@@ -102,7 +101,7 @@ body {
       span {
         font-size: 20px;
         font-weight: 500;
-        padding: 5px 10px;
+        // line-height: 1.3;
       }
 
       h1 {
@@ -128,7 +127,7 @@ body {
     &__item {
       span {
         font-size: 17px;
-        padding: 5px 8px;
+        padding: 5px 0px;
       }
 
       h1 {
@@ -158,9 +157,9 @@ body {
       }
 
       span {
-        font-size: 15px;
+        font-size: 14px;
         letter-spacing: 0.5px;
-        padding: 5px 8px;
+        padding: 3px 0px;
       }
 
       h1 {
