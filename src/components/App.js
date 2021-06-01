@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import CountDown from './Countdown'
+import '../styles/main.scss'
 
-/*eslint no-extend-native: ["error", { "exceptions": ["Number"] }]*/
-Number.prototype.pad = function (size) {
-  var s = String(this)
-  while (s.length < (size || 2)) {
-    s = '0' + s
-  }
-  return s
-}
+const MainContext = React.createContext()
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -43,34 +38,12 @@ function App() {
   })
 
   return (
-    <div className='container u--center'>
-      {isLoading ? (
-        <span style={{ fontSize: 80 }}>Loading...</span>
-      ) : (
-        <div className='container__timer u--center e--glass'>
-          <div className='container__item'>
-            <span>Days</span>
-            <h1>{days.pad()}</h1>
-          </div>
-          <span className='container__seperator'>:</span>
-          <div className='container__item'>
-            <span>Hours</span>
-            <h1>{hours.pad()}</h1>
-          </div>
-          <span className='container__seperator'>:</span>
-          <div className='container__item'>
-            <span>Minutes</span>
-            <h1>{minutes.pad()}</h1>
-          </div>
-          <span className='container__seperator'>:</span>
-          <div className='container__item'>
-            <span>Seconds</span>
-            <h1>{seconds.pad()}</h1>
-          </div>
-        </div>
-      )}
-    </div>
+    <MainContext.Provider value={{ days, hours, minutes, seconds, isLoading }}>
+      <div>
+        <CountDown></CountDown>
+      </div>
+    </MainContext.Provider>
   )
 }
 
-export default App
+export { App, MainContext }
